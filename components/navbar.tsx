@@ -1,4 +1,4 @@
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // import './globals.css'
 
 import React from "react";
