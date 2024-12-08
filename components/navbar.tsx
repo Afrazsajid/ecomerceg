@@ -9,12 +9,15 @@ import {
 } from "@/components/ui/popover";
 import Link from 'next/link';
 
+import Searchfrom from "@/components/ui/serachform"
+
 // Define props type for dynamic button highlighting
 interface NavbarProps {
   highlightedItem: "home" | "category" | "cart" | "login" | "signup";
+  query?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
+const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
   // A function to check if the current item is the highlighted one
   const getButtonClass = (item: string) =>
     highlightedItem === item
@@ -32,11 +35,12 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
 
         {/* Search Bar */}
         <div className="hidden md:flex items-center flex-grow max-w-lg">
-          <input
+          {/* <input
             type="text"
             placeholder="Search..."
             className="w-full border rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          /> */}
+          <Searchfrom query={query}/>
         </div>
 
         {/* Buttons (Visible on Desktop) */}
@@ -121,11 +125,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
 
       {/* Search Bar (Visible on small screens) */}
       <div className="md:hidden px-4 py-2 bg-gray-100">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-full border rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+      <Searchfrom/>
       </div>
     </nav>
   
