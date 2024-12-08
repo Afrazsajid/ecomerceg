@@ -95,7 +95,7 @@ export default async function Home({
           {query ? `Search results for "${query}"` : "Best seller"}
         </p>
         <p className="text-10-semibold text-center">
-          {query ? `Search results for ""` : "Get your best with best price"}
+          {query ? `get any product from us` : "Get your best with best price"}
         </p>
         
 
