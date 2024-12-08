@@ -1,4 +1,4 @@
-import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+// import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // import './globals.css'
 
 import React from "react";
@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
       : "bg-gray-100 text-gray-800";
 
   return (
-    <><ClerkProvider>
+    <>
     
 
     <nav className="bg-white shadow-md sticky w-full top-0 z-50">
@@ -57,13 +57,13 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
             Cart
           </Link>
          {/* Conditionally render Login/Signup or UserButton based on signed-in state */}
-         <SignedOut>
+         {/* <SignedOut>
               <Link href="./signin" className={`px-4 py-2 rounded-lg ${getButtonClass("login")} hover:bg-gray-300`}>Login</Link>
               <Link href="./signup" className={`px-4 py-2 rounded-lg ${getButtonClass("signup")} hover:bg-gray-300`}>Sign Up</Link>
             </SignedOut>
             <SignedIn>
               <UserButton />
-            </SignedIn>
+            </SignedIn> */}
           
         </div>
 
@@ -128,7 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
         />
       </div>
     </nav>
-    </ClerkProvider>
+  
     </>
   );
 };
