@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem }) => {
   const getButtonClass = (item: string) =>
     highlightedItem === item
       ? "bg-primary text-white"
-      : "bg-gray-100 text-gray-800";
+      : " text-gray-800";
 
   return (
     <>
