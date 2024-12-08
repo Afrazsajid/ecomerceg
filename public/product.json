@@ -1,0 +1,31 @@
+[
+    {
+      "_launchAt": "2023-08-18T13:47:18.795Z",
+      "sold": 120,
+      "shopkeeper": {
+        "_id": "sk124",
+        "name": "Jane Smith",
+        "image": "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg"
+      },
+      "productname": "EcoLamp",
+      "category": "Home & Living",
+      "_id": "prod1w2e3r4t5",
+      "image": "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "description": "An eco-friendly lamp that saves energy."
+    },
+    {
+      "_launchAt": "2023-09-14T22:40:06.657Z",
+      "sold": 200,
+      "shopkeeper": {
+        "_id": "sk125",
+        "name": "Emily Brown",
+        "image": "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      },
+      "productname": "SmartBottle",
+      "category": "Fitness",
+      "_id": "prod7y8u9i0o",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfVVG_MfZZevJc8R4nRKMHXdmfDs1hKLSsNQ&s",
+      "description": "A smart water bottle with hydration tracking."
+    }
+  ]
+  

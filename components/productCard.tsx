@@ -44,7 +44,7 @@ export type ProductTypeCard = {
             <span className="text-16-medium">{sold}</span>
           </div>
         </div>
-        <Link href={`/product/${_id}`}>
+        <Link href={`/products/${_id}`}>
          
   
           <img src={image} alt="placeholder" className="product-card_img" />
