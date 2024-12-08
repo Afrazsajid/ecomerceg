@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from "@/components/navbar"
+import {ProductTypeCard} from '@/components/productCard';
+import ProductCard from "@/components/productCard"
+
+
+
+
 
 
 
@@ -10,6 +16,52 @@ export default async function Home({
   searchParams: Promise<{ query?: string }>;
 }) {
   const query = (await searchParams).query;
+  const posts: ProductTypeCard[] = [
+    {
+      _launchAt: "2024-01-01T12:00:00Z",
+      sold: 150,
+      shopkeeper: {
+        _id: "sk123",
+        name: "John Doe",
+        image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      },
+      productname: "SuperWidget",
+      category: "Electronics",
+      _id: "prod12345",
+      image: "https://upload.wikimedia.org/wikipedia/en/0/09/Widget_Coverart.png",
+      description: "A high-quality widget designed for tech enthusiasts.",
+    },
+    {
+      _launchAt: "2023-11-20T10:00:00Z",
+      sold: 85,
+      shopkeeper: {
+        _id: "sk124",
+        name: "Jane Smith",
+        image: "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg",
+      },
+      productname: "EcoLamp",
+      category: "Home & Living",
+      _id: "prod67890",
+      image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      description: "An eco-friendly lamp that saves energy.",
+    },
+    {
+      _launchAt: "2024-02-15T08:30:00Z",
+      sold: 200,
+      shopkeeper: {
+        _id: "sk125",
+        name: "Emily Brown",
+        image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      },
+      productname: "SmartBottle",
+      category: "Fitness",
+      _id: "prod11223",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfVVG_MfZZevJc8R4nRKMHXdmfDs1hKLSsNQ&s",
+      description: "A smart water bottle with hydration tracking.",
+    },
+  ];
+  
+  
 
   return (
     <>
@@ -38,9 +90,26 @@ export default async function Home({
         </div>
       </div>
      
-        <p className="text-30-semibold">
-          {query ? `Search results for "${query}"` : "All Startups"}
+      <section className="section_container">
+        <p className="text-30-semibold text-center">
+          {query ? `Search results for "${query}"` : "Best seller"}
         </p>
+        <p className="text-10-semibold text-center">
+          {query ? `Search results for ""` : "Get your best with best price"}
+        </p>
+        
+
+        <ul className="mt-7 card_grid">
+          {posts?.length > 0 ? (
+            posts.map((post: ProductTypeCard) => (
+              <ProductCard key={post?._id} post={post} />
+            ))
+          ) : (
+            <p className="no-results">No products found</p>
+          )}
+          
+        </ul>
+      </section>
         
     </>
   );

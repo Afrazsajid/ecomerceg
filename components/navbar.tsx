@@ -1,5 +1,6 @@
 // import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // import './globals.css'
+import { Menu } from 'lucide-react';
 
 import React from "react";
 import {
@@ -77,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           <PopoverTrigger asChild>
             <button className="md:hidden focus:outline-none">
               <div className="w-8 h-8 flex items-center justify-center border rounded-md">
-                <span className="material-icons text-gray-800">menu</span>
+                <span className="material-icons text-gray-800"><Menu/></span>
               </div>
             </button>
           </PopoverTrigger>
