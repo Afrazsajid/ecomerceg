@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navbar from "@/components/navbar"
 import {ProductTypeCard} from '@/components/productCard';
 import ProductCard from "@/components/productCard"
+import EditorPick from '@/components/editorpick';
 
 
 
@@ -110,6 +111,7 @@ export default async function Home({
           
         </ul>
       </section>
+      <EditorPick/>
         
     </>
   );
