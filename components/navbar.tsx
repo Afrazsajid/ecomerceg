@@ -1,6 +1,6 @@
 // import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // import './globals.css'
-import { Menu } from 'lucide-react';
+import { Menu , ShoppingCart } from 'lucide-react';
 
 import React from "react";
 import {
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           <Link href="./category"
             className={`px-4 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300`}
           >
-            Cart
+           < ShoppingCart />
           </Link>
          {/* Conditionally render Login/Signup or UserButton based on signed-in state */}
          {/* <SignedOut>
