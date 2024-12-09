@@ -1,5 +1,6 @@
 import { getProductById } from "@/lib/utils";
 import ProductFullCard from "@/components/productfullcard";
+import Navbar from "@/components/navbar";
 
 // This will get the dynamic parameter from the URL
 const Products = async ({ params }: { params: { id: string } }) => {
@@ -15,6 +16,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+    <Navbar/>
       <ProductFullCard product={product} />
     </>
   );

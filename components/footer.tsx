@@ -2,7 +2,7 @@
 import Searchfrom from "@/components/ui/serachform"
 const Footer = () => {
   return (
-    <footer className="footer relative mt-72 bg-footerBg text-footerText">
+    <footer className="footer relative mt-72 bg-footerBg text-footerText bg-primary-100 text-white">
       {/* Parallax Animation */}
       <div className="absolute left-0 top-[-300px] h-[300px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-repeat-x bg-[url('https://i.ibb.co/nQM4PGJ/arbres.png')] animate-parallax"></div>
@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-8 text-lg uppercase flex items-center">
               <i className="mr-2" data-feather="shopping-bag"></i>
-              <span>The Shop</span>
+              <span className="font-bold">The Shop</span>
             </h3>
             <ul className="space-y-4">
               {["Legal Notice", "Privacy Policy", "Terms and Conditions", "Shipping and Returns", "Contest Rules"].map(
@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-8 text-lg uppercase flex items-center">
               <i className="mr-2" data-feather="share-2"></i>
-              <span>Our Socials</span>
+              <span className="font-bold">Our Socials</span>
             </h3>
             <ul className="space-y-4">
               {["YouTube", "Facebook", "Instagram"].map((platform) => (
@@ -64,7 +64,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-8 text-lg uppercase flex items-center">
               <i className="mr-2" data-feather="send"></i>
-              <span>Contact</span>
+              <span className="font-bold">Contact</span>
             </h3>
             <ul className="space-y-4">
               <li>
@@ -77,7 +77,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-8 text-lg uppercase flex items-center">
               <i className="mr-2" data-feather="send"></i>
-              <span>Contact</span>
+              <span className="font-bold">Search</span>
             </h3>
             <ul className="space-y-4">
               <li>
