@@ -96,33 +96,27 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
               >
                 Home
               </button>
-              <button
+              <Link href="/category"
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
                   "category"
                 )} hover:bg-gray-300`}
               >
                 Category
-              </button>
+              </Link>
+           
+              <Link href="/about"
+                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
+                  "login"
+                )} hover:bg-gray-300`}
+              >
+                about
+              </Link>
               <button
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
                   "cart"
                 )} hover:bg-gray-300`}
               >
-                Cart
-              </button>
-              <button
-                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
-                  "login"
-                )} hover:bg-gray-300`}
-              >
-                Login
-              </button>
-              <button
-                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
-                  "signup"
-                )} hover:bg-gray-300`}
-              >
-                Sign Up
+                <ShoppingCart/>
               </button>
             </div>
           </PopoverContent>
