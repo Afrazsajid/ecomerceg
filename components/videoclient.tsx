@@ -1,10 +1,11 @@
 "use client"
 import React from 'react'
 import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const VideoPlayer = dynamic(() => import('@/components/videoPlayer'), {
     ssr: false, // Disable server-side rendering to ensure the video is loaded on the client-side
-    loading: () => <p>Loading video...</p>, // Fallback loading message while the component is loading
+    loading: () =><Skeleton className="product-card_skeleton" />, // Fallback loading message while the component is loading
   });
 
  
