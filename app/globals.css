@@ -48,10 +48,10 @@
     }
 
     .pink_container {
-        @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center  py-10 px-6 gap-80;
+        @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center  py-10  gap-64 px-20;
     }
     .about_container {
-        @apply w-full bg-blue-400 min-h-[530px] pattern flex justify-between items-center   gap-80;
+        @apply w-full bg-primaryB-100 min-h-[530px] pattern flex justify-between items-center   gap-80;
     }
 
     .tag {
@@ -149,7 +149,7 @@
 
     /* productcard */
     .product-card {
-        @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+        @apply bg-white border-[1px] border-black py-6 px-3 rounded-[22px] hover:shadow-100 hover:border-primary transition-all duration-500 hover:bg-primary-100;
     }
 
     .product-card_date {

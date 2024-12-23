@@ -14,7 +14,7 @@ import Searchfrom from "@/components/ui/serachform"
 
 // Define props type for dynamic button highlighting
 interface NavbarProps {
-  highlightedItem: "home" | "category" | "cart" | "login" | "signup"| "about";
+  highlightedItem: "home" |  "pricing"   |  "category" | "cart" | "login" | "signup"| "about"  ;
   query?: string;
 }
 
@@ -60,6 +60,11 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
             className={`px-4 py-2 rounded-lg ${getButtonClass("about")} hover:bg-gray-300`}
           >
             about
+          </Link>
+          <Link href="./pricing"
+            className={`px-4 py-2 rounded-lg ${getButtonClass("pricing")} hover:bg-gray-300`}
+          >
+            pricing
           </Link>
           <Link href="./category"
             className={`px-4 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300`}
@@ -110,6 +115,12 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
                 )} hover:bg-gray-300`}
               >
                 about
+              </Link><Link href="/pricing"
+                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
+                  "login"
+                )} hover:bg-gray-300`}
+              >
+                pricing
               </Link>
               <button
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
