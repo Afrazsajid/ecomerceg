@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import React from "react";
+import ReviewSection from "./review";
+import ProductDescription from "./proddecription";
+import TabbedSection from "./prodtabbed";
 
 type Size = "S" | "M" | "L" | "XL" | "XXL";
 type Color = "black" | "red" | "blue";
@@ -154,27 +157,10 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
           </div>
         </div>
       </div>
-
-      {/* Reviews Section */}
-      <div className="w-full max-w-screen-lg p-4 mt-6 bg-white shadow-md rounded-sm">
-        <h3 className="text-xl font-bold mb-4">Customer Reviews</h3>
-        {reviews.map((review, index) => (
-          <div key={index} className="border-b border-gray-300 py-4">
-            <div className="flex justify-between">
-              <span className="font-bold text-gray-800">{review.name}</span>
-              <div className="text-yellow-400">
-                {Array(review.rating)
-                  .fill(0)
-                  .map((_, starIndex) => (
-                    <i key={starIndex} className="bx bxs-star"></i>
-                  ))}
-              </div>
-            </div>
-            <p className="text-sm text-gray-700 mt-2">{review.comment}</p>
-          </div>
-        ))}
-      </div>
+      
+      <TabbedSection/>
     </div>
+    
   );
 };
 
