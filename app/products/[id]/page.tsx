@@ -45,24 +45,25 @@ const Products = async ({ params }: { params: { id: string } }) => {
       description: "A Stylish picture taking camera",
     },
     {
-      _launchAt: "2024-02-15T08:30:00Z",
-      sold: 200,
+      _launchAt: "2023-11-20T10:00:00Z",
+      sold: 85,
       shopkeeper: {
-        _id: "sk128",
-        name: "Emily Brown",
+        _id: "sk124",
+        name: "Jane Smith",
         image: "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg",
       },
-      productname: "Hadn bag",
-      category: "Fashion",
-      _id: "prod7y8u9i0og",
-      image: "https://plus.unsplash.com/premium_photo-1664392147011-2a720f214e01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      description: "A smart water bottle with hydration tracking.",
+      productname: "MakeUp set",
+      category: "fashion",
+      _id: "prod1w2e3r4l2",
+      image: "https://xphotography.ca/wp-content/uploads/2023/04/flat-lay-with-cosmetics-and-flowers-2021-09-24-20-27-42-utc.jpg",
+      description: "A make up set prefect for teen age",
     },
+    
   ];
 
   return (
     <>
-    <Navbar highlightedItem="products"/>
+    <Navbar highlightedItem="home"/>
       <ProductFullCard product={product} />
       {/* frquenlty bought */}
       <p className="text-30-semibold text-left w-2/3 mx-auto ">Frequently Bought</p>
