@@ -22,12 +22,12 @@ const Products = async ({ params }: { params: { id: string } }) => {
       shopkeeper: {
         _id: "sk123",
         name: "John Doe",
-        image: "https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?cs=srgb&dl=pexels-pixabay-279906.jpg&fm=jpg",
+        image: "https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?cs=srgb&dl=pexels-pixabay-279906.jpg&fm=jpgdl=pexels-pixabay-279906.jpg&fm=jpg",
       },
-      productname: "SuperWidget",
-      category: "Electronics",
+      productname: "Stool",
+      category: "Furniture",
       _id: "prod12345",
-      image: "https://upload.wikimedia.org/wikipedia/en/0/09/Widget_Coverart.png",
+      image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D",
       description: "A high-quality widget designed for tech enthusiasts.",
     },
     {
@@ -38,24 +38,24 @@ const Products = async ({ params }: { params: { id: string } }) => {
         name: "Jane Smith",
         image: "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg",
       },
-      productname: "EcoLamp",
-      category: "Home & Living",
-      _id: "prod1w2e3r4t5",
-      image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      description: "An eco-friendly lamp that saves energy.",
+      productname: "Camera",
+      category: "Electronics",
+      _id: "prod1w2e3r4x2",
+      image: "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "A Stylish picture taking camera",
     },
     {
       _launchAt: "2024-02-15T08:30:00Z",
       sold: 200,
       shopkeeper: {
-        _id: "sk125",
+        _id: "sk128",
         name: "Emily Brown",
-        image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=620&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+        image: "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg",
       },
-      productname: "SmartBottle",
-      category: "Fitness",
-      _id: "prod7y8u9i0o",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfVVG_MfZZevJc8R4nRKMHXdmfDs1hKLSsNQ&s",
+      productname: "Hadn bag",
+      category: "Fashion",
+      _id: "prod7y8u9i0og",
+      image: "https://plus.unsplash.com/premium_photo-1664392147011-2a720f214e01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
       description: "A smart water bottle with hydration tracking.",
     },
   ];
@@ -64,7 +64,11 @@ const Products = async ({ params }: { params: { id: string } }) => {
     <>
     <Navbar highlightedItem="products"/>
       <ProductFullCard product={product} />
+      {/* frquenlty bought */}
+      <p className="text-30-semibold text-left w-2/3 mx-auto ">Frequently Bought</p>
+      
       <ul className="mt-7 card_grid w-2/3 mx-auto">
+     
           {posts?.length > 0 ? (
             posts.map((post: ProductTypeCard) => (
               <ProductCard key={post?._id} post={post} />
