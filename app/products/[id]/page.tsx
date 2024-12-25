@@ -4,6 +4,9 @@ import Navbar from "@/components/navbar";
 import ProductCard, {ProductTypeCard} from '@/components/productCard';
 
 
+// Adjust the pa
+
+
 // This will get the dynamic parameter from the URL
 const Products = async ({ params }: { params: { id: string } }) => {
   const { id } = params; // Extract the dynamic parameter 'id'
@@ -63,6 +66,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+      
     <Navbar highlightedItem="home"/>
       <ProductFullCard product={product} />
       {/* frquenlty bought */}
@@ -79,6 +83,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
           )}
           
         </ul>
+       
     </>
   );
 };

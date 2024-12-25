@@ -14,7 +14,7 @@ import Searchfrom from "@/components/ui/serachform"
 
 // Define props type for dynamic button highlighting
 interface NavbarProps {
-  highlightedItem: "home" |  "pricing"   |  "category" | "cart" | "login" | "signup"| "about"  ;
+  highlightedItem: "home" |  "pricing"   |  "category" | "cart" | "login" | "signup"| "about" | "contact"  ;
   query?: string;
 }
 
@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
 
         {/* Buttons (Visible on Desktop) */}
         <div className="hidden md:flex space-x-4">
-          <Link href="./"
+          <Link href="/"
             className={`px-4 py-2 rounded-lg ${getButtonClass("home")} hover:bg-blue-600`}
           >
             Home
@@ -66,7 +66,12 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           >
             pricing
           </Link>
-          <Link href="./category"
+          <Link href="./contact"
+            className={`px-4 py-2 rounded-lg ${getButtonClass("contact")} hover:bg-gray-300`}
+          >
+            contact
+          </Link>
+          <Link href="./cart"
             className={`px-4 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300`}
           >
            < ShoppingCart />
@@ -122,6 +127,11 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
               >
                 pricing
               </Link>
+              <Link href="./contact"
+            className={`px-4 py-2 rounded-lg ${getButtonClass("contact")} hover:bg-gray-300`}
+          >
+            contact
+          </Link>
               <button
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
                   "cart"

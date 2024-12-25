@@ -5,6 +5,8 @@ import ReviewSection from "./review";
 import ProductDescription from "./proddecription";
 import TabbedSection from "./prodtabbed";
 
+
+
 type Size = "S" | "M" | "L" | "XL" | "XXL";
 type Color = "black" | "red" | "blue";
 
@@ -61,6 +63,9 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
       comment: "It's okay, but I expected better stitching quality.",
     },
   ];
+
+
+
 
   return (
     <div className="flex flex-col items-center bg-gray-100">
