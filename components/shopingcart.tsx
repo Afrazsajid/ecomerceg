@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { useCart } from '@/app/context/cartcontext'; // Import the useCart hook
 import Navbar from '@/components/navbar';
 import { getProductById } from '@/lib/utils';
+import { FaTrash } from "react-icons/fa";
 
 const ShoppingCart: React.FC = () => {
-  const { cart, loading, updateQuantity, getTotalPrice, promoCode, setPromoCode, discount, applyPromoCode } = useCart();
+  const { cart, loading, removeFromCart, updateQuantity, getTotalPrice, promoCode, setPromoCode, discount, applyPromoCode } = useCart();
   
   const [updatingItemId, setUpdatingItemId] = useState<string | null>(null); // Track which item is being updated
 
@@ -16,6 +17,12 @@ const ShoppingCart: React.FC = () => {
     setUpdatingItemId(null); // Re-enable buttons for all items after update is done
   };
 
+  const handleDeleteItem = (itemId: string,namee:string) => {
+    console.log('Deleting item with id:', itemId);
+    console.log('Deleting item with id:', namee);
+    removeFromCart(itemId); // Make sure removeFromCart is using the correct itemId
+  };
+  
   if (loading && cart.length === 0) {
     // Loading screen only when cart is being fetched initially
     return (
@@ -91,7 +98,14 @@ const ShoppingCart: React.FC = () => {
                   </div>
                   <div className="ml-4 text-lg font-semibold">
                     € {parseFloat(product.setprice.replace('€', '')) * item.quantity}
-                  </div>
+                    </div>
+                  {/* Delete Button */}
+                  <button
+                    onClick={() => handleDeleteItem(item.id,product.productname)}
+                    className=" text-red-500 hover:text-red-700 mx-4"
+                  >
+                    <FaTrash className="w-6 h-6" />
+                  </button>
                 </div>
               );
             })}

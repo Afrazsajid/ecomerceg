@@ -25,7 +25,7 @@ const Accordion: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto p-14 max-w-full">
+    <div className="container mx-auto p-1 max-w-full">
       <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {questions.map((question, index) => (

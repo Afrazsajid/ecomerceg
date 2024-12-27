@@ -1,3 +1,5 @@
+"use client"
+
 import { cn, formatDate } from "@/lib/utils";
 import { EyeIcon } from "lucide-react";
 import Link from "next/link";
@@ -5,6 +7,10 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import { Skeleton } from "@/components/ui/skeleton";
+import { useCart } from "@/app/context/cartcontext";
+
+
+
 
 // types.ts or within your component file
 export type ProductTypeCard = {
@@ -24,6 +30,8 @@ export type ProductTypeCard = {
 
 
   const ProductCard = ({ post }: { post: ProductTypeCard }) => {
+
+     
     const {
       _launchAt,
       sold,
@@ -34,6 +42,13 @@ export type ProductTypeCard = {
       image,
       description,
     } = post;
+
+    const { addToCart } = useCart();
+    
+    const handleAddToCart = () => {
+      addToCart(post._id); // Add the product to the cart
+      alert(`Product added to the cart! ${post.productname}`);
+    };
   
     return (
       <li className="product-card group">
@@ -77,8 +92,8 @@ export type ProductTypeCard = {
           <Link href={`/?query=${category?.toLowerCase()}`}>
             <p className="text-16-medium">{category}</p>
           </Link>
-          <Button className="product-card_btn" asChild>
-            <Link href={`/product/${_id}`}>Details</Link>
+          <Button className="product-card_btn" asChild onClick={handleAddToCart}>
+            <Link href={`/products/${_id}`}>Add to cart</Link>
           </Button>
         </div>
       </li>

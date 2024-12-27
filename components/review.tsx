@@ -44,7 +44,7 @@ const ReviewSection: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-8">
+    <div className="w-full mx-auto sm:p-8">
       <h2 className="text-2xl font-bold mb-6">Customer Reviews</h2>
       <div className="space-y-6">
         {reviews.map((review) => (

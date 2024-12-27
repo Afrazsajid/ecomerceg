@@ -63,9 +63,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   // Remove item from cart
-  const removeFromCart = (id: string) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  const removeFromCart = (itemId: string) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== itemId)); // Make sure you're filtering based on the ID
   };
+  
 
   // Update item quantity in the cart
   const updateQuantity = (id: string, quantity: number) => {

@@ -7,7 +7,7 @@ const TabbedSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"description" | "reviews" | "FAQs"  >("description");
 
   return (
-    <div className="w-full mx-auto p-8">
+    <div className="w-full mx-auto p-4 sm:p-8">
       {/* Tab Buttons */}
       <div className="flex justify-center space-x-8 mb-6 relative border-b border-gray-300">
         <button
