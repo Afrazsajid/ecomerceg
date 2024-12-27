@@ -1,5 +1,6 @@
 // import { ClerkProvider,  SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // import './globals.css'
+"use client"
 import { Menu , ShoppingCart } from 'lucide-react';
 
 import React from "react";
@@ -11,6 +12,10 @@ import {
 import Link from 'next/link';
 
 import Searchfrom from "@/components/ui/serachform"
+import { useCart } from '@/app/context/cartcontext';
+
+
+
 
 // Define props type for dynamic button highlighting
 interface NavbarProps {
@@ -19,6 +24,10 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
+
+  const { cart } = useCart();
+
+  
   // A function to check if the current item is the highlighted one
   const getButtonClass = (item: string) =>
     highlightedItem === item
@@ -51,30 +60,36 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           >
             Home
           </Link>
-          <Link href="./category"
+          <Link href="/category"
             className={`px-4 py-2 rounded-lg ${getButtonClass("category")} hover:bg-gray-300`}
           >
             Category
           </Link>
-          <Link href="./about"
+          <Link href="/about"
             className={`px-4 py-2 rounded-lg ${getButtonClass("about")} hover:bg-gray-300`}
           >
             about
           </Link>
-          <Link href="./pricing"
+          <Link href="/pricing"
             className={`px-4 py-2 rounded-lg ${getButtonClass("pricing")} hover:bg-gray-300`}
           >
             pricing
           </Link>
-          <Link href="./contact"
+          <Link href="/contact"
             className={`px-4 py-2 rounded-lg ${getButtonClass("contact")} hover:bg-gray-300`}
           >
             contact
           </Link>
-          <Link href="./cart"
-            className={`px-4 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300`}
+          <Link href="/cart"
+            className={`px-6 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300 relative`}
           >
-           < ShoppingCart />
+            {/* Cart Icon */}
+          <ShoppingCart  />
+          <span className="absolute bottom-0 right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {cart.length}
+            </span>
+          
+          
           </Link>
          {/* Conditionally render Login/Signup or UserButton based on signed-in state */}
          {/* <SignedOut>

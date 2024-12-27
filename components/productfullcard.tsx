@@ -4,6 +4,9 @@ import React from "react";
 import ReviewSection from "./review";
 import ProductDescription from "./proddecription";
 import TabbedSection from "./prodtabbed";
+import { useCart } from "@/app/context/cartcontext";
+import Link from "next/link";
+
 
 
 
@@ -63,6 +66,15 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
       comment: "It's okay, but I expected better stitching quality.",
     },
   ];
+
+
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(product._id); // Add the product to the cart
+    alert(`Product added to the cart! ${product.productname}`);
+  };
+
 
 
 
@@ -146,12 +158,14 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
                   ></div>
                 ))}
               </div>
+           
             </div>
             <div className="h-px bg-gray-300 my-4"></div>
             <div className="flex flex-wrap gap-4">
-              <button className="flex-1 px-4 py-2 bg-secondary text-white font-bold rounded-md hover:bg-blue-600">
+              <Link href="/cart"><button className="flex-1 px-4 py-2 bg-secondary text-white font-bold rounded-md hover:bg-blue-600" onClick={handleAddToCart}>
                 <i className="bx bxs-zap"></i> Buy Now
-              </button>
+              </button></Link>
+              
               <button className="flex-1 px-4 py-2 bg-gray-200 text-gray-800 font-bold rounded-md hover:bg-gray-300">
                 <i className="bx bxs-cart"></i> Add to Cart
               </button>

@@ -1,17 +1,7 @@
-"use client"
+"use client";
 
-import React, { createContext, useState, ReactNode, useContext } from 'react';
+import React, { createContext, useState, ReactNode, useContext, useEffect } from 'react';
 import { getProductById } from '@/lib/utils';
-
-interface Product {
-  _id: string;
-  productname: string;
-  category: string;
-  image: string;
-  description: string;
-  unsetprice: string;
-  setprice: string;
-}
 
 interface CartItem {
   id: string;
@@ -28,6 +18,7 @@ interface CartContextType {
   setPromoCode: (code: string) => void;
   discount: number;
   applyPromoCode: () => void;
+  loading: boolean; // Add loading state
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -37,46 +28,60 @@ interface CartProviderProps {
 }
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  const [cart, setCart] = useState<CartItem[]>([
-    { id: "prod1w2e3r4t5", quantity: 1 },
-    { id: "prod7y8u9i0o", quantity: 2 },
-  ]);
+  // Retrieve cart data from localStorage or initialize with an empty array
+  const savedCart = typeof window !== 'undefined' ? localStorage.getItem('cart') : null;
+  const initialCart = savedCart ? JSON.parse(savedCart) : [];
+
+  const [cart, setCart] = useState<CartItem[]>(initialCart);
   const [promoCode, setPromoCode] = useState<string>('');
   const [discount, setDiscount] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(true); // State to track if data is loading
 
+  // Store cart data in localStorage whenever cart state changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Simulate delay for localStorage data load (optional)
+      setLoading(true);
+      setTimeout(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        setLoading(false); // Set loading to false once cart is loaded
+      }, 200); // Optionally add a delay to simulate loading time
+    }
+  }, [cart]);
+
+  // Add item to cart or increment its quantity if already in the cart
   const addToCart = (id: string) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === id);
       if (existingItem) {
         return prevCart.map((item) =>
-          item.id === id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
       return [...prevCart, { id, quantity: 1 }];
     });
   };
 
+  // Remove item from cart
   const removeFromCart = (id: string) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
+  // Update item quantity in the cart
   const updateQuantity = (id: string, quantity: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(quantity, 1) }
-          : item
+        item.id === id ? { ...item, quantity: Math.max(quantity, 1) } : item
       )
     );
   };
 
+  // Calculate the total price based on cart items and applied discount
   const getTotalPrice = () => {
     const total = cart.reduce((total, item) => {
       const product = getProductById(item.id);
       if (!product) return total;
-
+      
       const price = parseFloat(product.setprice.replace("€", ""));
       return total + price * item.quantity;
     }, 0);
@@ -84,6 +89,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     return total - discount;
   };
 
+  // Apply a promo code and update the discount accordingly
   const applyPromoCode = () => {
     if (promoCode === "DISCOUNT10") {
       setDiscount(getTotalPrice() * 0.1); // Apply 10% discount
@@ -105,6 +111,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         setPromoCode,
         discount,
         applyPromoCode,
+        loading, // Provide loading state
       }}
     >
       {children}
