@@ -163,7 +163,7 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
             <div className="h-px bg-gray-300 my-4"></div>
             <div className="flex flex-wrap gap-4">
               <Link href={"/cart"}>
-             <button className="flex-1 px-4 py-2 bg-secondary text-white font-bold rounded-md hover:bg-blue-600" onClick={handleAddToCart}>
+             <button className="flex-1 px-4 py-2 bg-green-600 text-white font-bold rounded-md hover:bg-blue-600" onClick={handleAddToCart}>
                 <i className="bx bxs-zap"></i> Buy Now
               </button>
               </Link>

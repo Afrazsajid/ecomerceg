@@ -22,7 +22,7 @@ const Footer = () => {
       {/* Footer Content */}
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 border-b py-6 ">
         {/* Bandage Heading */}
-        <h2 className="text-2xl font-bold">Bandage</h2> {/* Increased size */}
+        <h2 className="text-2xl font-bold">Desi Bazar</h2> {/* Increased size */}
         
         {/* Social Media Icons */}
         <div className="flex space-x-6 text-white text-lg"> {/* Increased icon size */}
