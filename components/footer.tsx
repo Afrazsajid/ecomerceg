@@ -1,8 +1,10 @@
 "use client";
 import Searchfrom from "@/components/ui/serachform"
+import { FaFacebook, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer relative mt-72 bg-footerBg text-footerText bg-primary-100 text-white">
+
       {/* Parallax Animation */}
       <div className="absolute left-0 top-[-300px] h-[300px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-repeat-x bg-[url('https://i.ibb.co/nQM4PGJ/arbres.png')] animate-parallax"></div>
@@ -18,6 +20,24 @@ const Footer = () => {
       </div>
 
       {/* Footer Content */}
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 border-b py-6 ">
+        {/* Bandage Heading */}
+        <h2 className="text-2xl font-bold">Bandage</h2> {/* Increased size */}
+        
+        {/* Social Media Icons */}
+        <div className="flex space-x-6 text-white text-lg"> {/* Increased icon size */}
+          <a href="" aria-label="Facebook" className="hover:text-sky-600">
+            <FaFacebookF/>
+          </a>
+          <a href="#" aria-label="Instagram" className="hover:text-sky-600">
+           <FaInstagram/>
+          </a>
+          <a href="#" aria-label="Twitter" className="hover:text-sky-600">
+            <FaTwitter/>
+          </a>
+        </div>
+      </div>
+
       <div className="container mx-auto p-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Column 1 */}

@@ -4,6 +4,8 @@ import Navbar from "@/components/navbar"
 import {ProductTypeCard} from '@/components/productCard';
 import ProductCard from "@/components/productCard"
 import EditorPick from '@/components/editorpick';
+import FeaturedProducts from '@/components/feturedproducts';
+import Shirtsection from '@/components/3rdsectionshirt';
 
 
 
@@ -112,6 +114,14 @@ export default async function Home({
         </ul>
       </section>
       <EditorPick/>
+
+
+      {/* 3rd section */}
+      <Shirtsection/>
+      
+
+        <FeaturedProducts/>
+
         
     </>
   );

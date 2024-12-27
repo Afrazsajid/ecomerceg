@@ -97,6 +97,22 @@ const products: Product[] = [
   setprice:"7$"
   },
   {
+    _launchAt: "2024-01-01T12:00:00Z",
+    sold: 150,
+    shopkeeper: {
+      _id: "sk123",
+      name: "John Doe",
+      image: "https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?cs=srgb&dl=pexels-pixabay-279906.jpg&fm=jpgdl=pexels-pixabay-279906.jpg&fm=jpg",
+    },
+    productname: "Vita",
+    category: "Shirts",
+    _id: "prod1234yt5",
+    image: "https://res.cloudinary.com/dvbc6ctqu/image/upload/v1734727783/shop-hero-2-png-picture-1_mzdvop.png",
+    description: "A high-quality Shirt designed for pakistani to feel cold",
+    unsetprice:"12$",
+  setprice:"3$"
+  },
+  {
     _launchAt: "2023-11-20T10:00:00Z",
     sold: 85,
     shopkeeper: {
@@ -121,19 +137,133 @@ const products: Product[] = [
       image: "https://static.lepro.com/media/catalog/product/6/1/61LhX5XAryL._AC_SL1500_.jpg",
     },
     productname: "MakeUp set",
-    category: "fashion",
+    category: "Fashion",
     _id: "prod1w2e3r4l2",
     image: "https://xphotography.ca/wp-content/uploads/2023/04/flat-lay-with-cosmetics-and-flowers-2021-09-24-20-27-42-utc.jpg",
     description: "A make up set prefect for teen age",
     unsetprice:"14$",
   setprice:"7$"
   },
+  {
+    _launchAt: "2024-12-22T10:00:00Z",
+    sold: 120,
+    shopkeeper: {
+      _id: "sk001",
+      name: "John Doe",
+      image: "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    productname: "Wireless Headphones",
+    category: "Tech Accessories",
+    _id: "prod1a2b3c4d5e6",
+    image: "https://images.unsplash.com/photo-1612465289702-7c84b5258fde?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Immerse yourself in crystal-clear audio with our wireless headphones, featuring noise cancellation, long-lasting battery, and a sleek, lightweight design perfect for all-day comfort.",
+    unsetprice: "59$",
+    setprice: "49$"
+  },
+  {
+    "_launchAt": "2024-12-18T10:00:00Z",
+    "sold": 85,
+    "shopkeeper": {
+      "_id": "sk002",
+      "name": "Alice Johnson",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    "productname": "Modern Table Lamp",
+    "category": "Home Decor",
+    "_id": "prod2e3f4g5h6i7",
+    "image": "https://images.unsplash.com/photo-1613776822564-8859412fc09b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
+    "description": "Brighten up your room with this elegant table lamp, featuring a contemporary design, energy-efficient lighting, and premium materials that add style and functionality to your space.",
+    "unsetprice": "45$",
+    "setprice": "35$"
+  },
+  {
+    "_launchAt": "2024-12-15T10:00:00Z",
+    "sold": 150,
+    "shopkeeper": {
+      "_id": "sk003",
+      "name": "Michael Davis",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+    },
+    "productname": "Leather Backpack",
+    "category": "Fashion",
+    "_id": "prod3j4k5l6m7n",
+    "image": "https://images.unsplash.com/photo-1474376962954-d8a681cc53b2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Stay organized and stylish with this durable leather backpack, featuring multiple compartments, high-quality craftsmanship, and a timeless design for daily use or travel.",
+    "unsetprice": "120$",
+    "setprice": "95$"
+  },
+  {
+    _launchAt: "2023-10-15T14:30:00Z",
+    sold: 350,
+    shopkeeper: {
+      _id: "sk126",
+      name: "Laura Green",
+      image: "https://randomuser.me/api/portraits/women/1.jpg",
+    },
+    productname: "Building Blocks",
+    category: "Toys",
+    _id: "prod23456",
+    image: "https://m.media-amazon.com/images/I/71mnsQS0n1L._AC_SL1500_.jpg",
+    description: "Colorful building blocks for kids to enhance their creativity.",
+    unsetprice: "25$",
+    setprice: "15$"
+  },
+  {
+    _launchAt: "2023-11-05T09:00:00Z",
+    sold: 500,
+    shopkeeper: {
+      _id: "sk127",
+      name: "Daniela Lee",
+      image: "https://randomuser.me/api/portraits/women/3.jpg",
+    },
+    productname: "Toy Train Set",
+    category: "Toys",
+    _id: "prod34567",
+    image: "https://m.media-amazon.com/images/I/81zdnJiVGbL.jpg",
+    description: "A complete toy train set for kids, featuring tracks and engine.",
+    unsetprice: "40$",
+    setprice: "30$"
+  },
+  {
+    _launchAt: "2023-12-10T11:20:00Z",
+    sold: 150,
+    shopkeeper: {
+      _id: "sk128",
+      name: "Chris Black",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    productname: "Remote Control Car",
+    category: "Toys",
+    _id: "prod45678",
+    image: "https://m.media-amazon.com/images/I/71M0R2x-LUL._AC_SL1500_.jpg",
+    description: "A fast remote control car with 360-degree rotation capabilities.",
+    unsetprice: "35$",
+    setprice: "25$"
+  }
+  
   
 
   
   
   // Add more products as needed
 ];
+
+// Assuming products are categorized using the categoryIndex
+const categoryIndex: { [key: string]: Product[] } = products.reduce((acc: { [key: string]: Product[] }, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = [];
+  }
+  acc[product.category].push(product);
+  return acc;
+}, {});
+
+// Utility function to find products by category
+export const getProductsByCategory = (category: string): Product[] => {
+  if(category==="All"){
+    return products
+  }
+  return categoryIndex[category] || []; // Returns an empty array if the category is not found
+};
 
 // Utility function to find a product by its ID
 export const getProductById = (id: string): Product | undefined => {

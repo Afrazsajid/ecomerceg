@@ -28,9 +28,9 @@ const Pricing = () => {
         <nav className="mt-4 text-sm text-gray-500">
           <ol className="inline-flex items-center space-x-2">
             <li>
-              <a href="/" className="hover:underline">
+              <span className="hover:underline">
                 Home
-              </a>
+              </span>
             </li>
             <li>
               <span className="text-gray-400">/</span>

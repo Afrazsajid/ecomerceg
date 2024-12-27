@@ -86,11 +86,11 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
         <div className="flex flex-wrap md:flex-nowrap gap-6">
           {/* Product Images */}
           <div className="w-full md:w-1/2">
-            <div className="relative h-96 bg-gray-200 p-4 flex items-center justify-center">
+            <div className="relative h-96 bg-gray-200 p-4 flex items-center justify-center ">
               <img
                 src={product.image}
                 alt={product.productname}
-                className="object-contain h-full"
+                className="w-full h-full object-cover"
               />
             </div>
             
@@ -118,8 +118,8 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
               <span className="text-sm text-gray-600 ml-2">(3 Reviews)</span>
             </div>
             <div className="flex items-center mb-4">
-              <span className="text-3xl font-bold text-gray-800">{product.unsetprice}</span>
-              <span className="ml-4 text-xl line-through text-gray-500">{product.setprice}</span>
+              <span className="text-3xl font-bold text-gray-800">{product.setprice}</span>
+              <span className="ml-4 text-xl line-through text-gray-500">{product.unsetprice}</span>
             </div>
             <div className="mb-4">
               <h3 className="font-medium text-lg">Description</h3>
@@ -169,8 +169,8 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
               </Link>
             
               
-              <button className="flex-1 px-4 py-2 bg-gray-200 text-gray-800 font-bold rounded-md hover:bg-gray-300">
-                <i className="bx bxs-cart" onClick={handleAddToCart}></i> Add to Cart
+              <button className="flex-1 px-4 py-2 bg-gray-200 text-gray-800 font-bold rounded-md hover:bg-gray-300" onClick={handleAddToCart}>
+                <i className="bx bxs-cart" ></i> Add to Cart
               </button>
               <button className="px-4 py-2 bg-gray-200 text-gray-800 font-bold rounded-md hover:text-red-500">
                 <i className="bx bxs-heart"></i> Wishlist
