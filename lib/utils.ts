@@ -239,7 +239,24 @@ const products: Product[] = [
     description: "A fast remote control car with 360-degree rotation capabilities.",
     unsetprice: "35$",
     setprice: "25$"
+  },
+  {
+    _launchAt: "2021-12-10T11:20:00Z",
+    sold: 150,
+    shopkeeper: {
+      _id: "sk128",
+      name: "Chris Black",
+      image: "https://randomuser.me/api/portraits/men/3.jpg",
+    },
+    productname: "Chicken Cloth",
+    category: "Clothing",
+    _id: "prod4567tre",
+    image: "https://5.imimg.com/data5/ANDROID/Default/2022/10/EA/TK/WD/37987103/product-jpeg-500x500.jpg",
+    description: "A fine tune made with love pure desi chicken cloth.",
+    unsetprice: "15$",
+    setprice: "11$"
   }
+
   
   
 

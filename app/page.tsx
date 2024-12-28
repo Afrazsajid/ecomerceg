@@ -76,10 +76,10 @@ export default async function Home({
             We know how large objects will act, but things on a small scale.
           </h3>
           <Link
-            href="./"
-            className={`px-6 py-3 rounded-lg bg-secondary hover:bg-blue-600`}
+            href="category"
+            className={`px-8 py-4 rounded-lg bg-green-600 hover:bg-blue-600 text-white font-bold text-[23px]`}
           >
-            Home
+            Shop Now
           </Link>
         </div>
         <div className="image-container hidden md:block">

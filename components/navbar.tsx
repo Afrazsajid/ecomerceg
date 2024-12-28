@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
     <nav className="bg-white shadow-md sticky w-full top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo / Home */}
-        <div className="text-lg font-bold text-gray-800 m-3">Brand</div>
+        <div className="text-lg font-bold text-gray-800 m-3">Desi Bazar</div>
 
         {/* Search Bar */}
         <div className="hidden md:flex items-center flex-grow max-w-lg">

@@ -13,7 +13,7 @@ const ProductDescription: React.FC = () => {
         {/* Image Section */}
         <div className="flex justify-center">
           <img
-            src="https://via.placeholder.com/400"
+            src="https://placehold.co/600x400/EEE/31343C"
             alt="Product preview"
             className="rounded-lg shadow-lg object-cover"
           />
