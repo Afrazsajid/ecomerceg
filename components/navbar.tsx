@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
         {/* Buttons (Visible on Desktop) */}
         <div className="hidden md:flex space-x-4">
           <Link href="/"
-            className={`px-4 py-2 rounded-lg ${getButtonClass("home")} hover:bg-blue-600`}
+            className={`px-4 py-2 rounded-lg ${getButtonClass("home")}`}
           >
             Home
           </Link>
@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           <Link href="/contact"
             className={`px-4 py-2 rounded-lg ${getButtonClass("contact")} hover:bg-gray-300`}
           >
-            contact
+            Contact
           </Link>
           <Link href="/cart"
             className={`px-6 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300 relative`}
@@ -106,21 +106,34 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
         {/* Mobile Menu */}
         <Popover>
           <PopoverTrigger asChild>
-            <button className="md:hidden focus:outline-none">
-              <div className="w-8 h-8 flex items-center justify-center border rounded-md">
+
+            <button className="md:hidden focus:outline-none flex justify-center items-center  gap-2">
+              <div className="w-8 h-8 flex items-center justify-center border rounded-md p-3">
                 <span className="material-icons text-gray-800"><Menu/></span>
               </div>
+              <Link href="/cart"
+                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
+                  "cart"
+                )} hover:bg-gray-300 relative`}
+              >
+                <ShoppingCart/>
+                <span className="absolute bottom-0 right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {cart.length}
+            </span>
+
+              </Link>
             </button>
+            
           </PopoverTrigger>
           <PopoverContent className="p-4 bg-white shadow-lg rounded-lg w-56">
             <div className="space-y-4">
-              <button
+              <Link href={"/"}
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
                   "home"
-                )} hover:bg-blue-600`}
+                )} hover:bg-gray-300`}
               >
                 Home
-              </button>
+              </Link>
               <Link href="/category"
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
                   "category"
@@ -131,32 +144,29 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
            
               <Link href="/about"
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
-                  "login"
+                  "about"
                 )} hover:bg-gray-300`}
               >
-                about
+                About Us
               </Link><Link href="/pricing"
                 className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
-                  "login"
+                  "pricing"
                 )} hover:bg-gray-300`}
               >
-                pricing
+                Pricing
               </Link>
-              <Link href="./contact"
-            className={`px-4 py-2 rounded-lg ${getButtonClass("contact")} hover:bg-gray-300`}
+              <Link href="/contact"
+            className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
+              "contact"
+            )} hover:bg-gray-300`}
           >
-            contact
-          </Link>
-              <button
-                className={`block w-full text-left px-4 py-2 rounded-lg ${getButtonClass(
-                  "cart"
-                )} hover:bg-gray-300`}
-              >
-                <ShoppingCart/>
-              </button>
+            Contact
+          </Link >
+              
             </div>
           </PopoverContent>
         </Popover>
+        
       </div>
 
       {/* Search Bar (Visible on small screens) */}

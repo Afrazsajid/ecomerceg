@@ -1,3 +1,4 @@
+import Navbar from '@/components/navbar';
 import React from 'react'
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram , FaRegEnvelope 
 , FaMapMarkerAlt ,FaPhone
@@ -5,7 +6,10 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram , FaRegEnvelope
 
 const page = () => {
   return (
+
+    
     <>
+    <Navbar highlightedItem='contact'/>
     <section className="bg-gray-50 py-16 px-8 relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
      
