@@ -14,13 +14,17 @@ const allProducts: ProductTypeCard[] = [
     _launchAt: "2024-01-01T12:00:00Z",
     sold: 50,
     shopkeeper: {
-      _id: "1",
+      
+
+_id: "1",
       name: "Shopkeeper 1",
       image: "/images/shopkeeper1.jpg"
     },
     productname: "Product 1",
     category: "Electronics",
-    _id: "product-1",
+    
+
+_id: "product-1",
     image: "/images/product1.jpg",
     description: "This is a description of product 1."
   },
@@ -28,13 +32,17 @@ const allProducts: ProductTypeCard[] = [
     _launchAt: "2024-01-01T12:00:00Z",
     sold: 30,
     shopkeeper: {
-      _id: "2",
+      
+
+_id: "2",
       name: "Shopkeeper 2",
       image: "/images/shopkeeper2.jpg"
     },
     productname: "Product 2",
     category: "Fashion",
-    _id: "product-2",
+    
+
+_id: "product-2",
     image: "/images/product2.jpg",
     description: "This is a description of product 2."
   },
@@ -90,7 +98,9 @@ const CategoryPage = () => {
         </div>
       ) : (
         products.map((product) => (
-          <div key={product._id} >
+          <div key={product.
+
+_id} >
             <ProductCard post={product} />
           </div>
         ))

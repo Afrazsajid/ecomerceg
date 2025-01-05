@@ -15,7 +15,9 @@ type Color = "black" | "red" | "blue";
 
 // Define the types for the product info
 interface Shopkeeper {
-  _id: string;
+  
+
+
   name: string;
   image: string;
 }
@@ -26,7 +28,9 @@ interface Product {
   shopkeeper: Shopkeeper;
   productname: string;
   category: string;
-  _id: string;
+  
+
+slug: string;
   image: string;
   description: string;
   unsetprice:string;
@@ -71,7 +75,9 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    addToCart(product._id); // Add the product to the cart
+    addToCart(product.
+
+slug); // Add the product to the cart
     alert(`Product added to the cart! ${product.productname}`);
   };
 

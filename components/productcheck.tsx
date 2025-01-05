@@ -1,7 +1,9 @@
 "use client"
 // Define TypeScript types for the JSON structure
 interface Shopkeeper {
-    _id: string;
+    
+
+_id: string;
     name: string;
     image: string;
   }
@@ -12,7 +14,9 @@ interface Shopkeeper {
     shopkeeper: Shopkeeper;
     productname: string;
     category: string;
-    _id: string;
+    
+
+_id: string;
     image: string;
     description: string;
   }
@@ -53,7 +57,9 @@ const ProductList: React.FC = () => {
       ) : (
         <ul>
           {products.map((product) => (
-            <li key={product._id}>
+            <li key={product.
+
+_id}>
               <h2>{product.productname}</h2>
               <p>{product.description}</p>
               <img src={product.image} alt={product.productname} style={{ width: '200px' }} />

@@ -11,14 +11,14 @@ const PricingPlans = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           {/* Free Plan */}
-          <div className="border rounded-lg p-6 bg-white shadow-sm">
+          <div className="border rounded-lg p-6 bg-white shadow-sm hover:bg-gray-700  hover:text-white">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 border-2 border-blue-500 rounded-full flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-primary rounded-full"></div>
               </div>
               <h2 className="ml-4 text-xl font-semibold text-gray-900">Free</h2>
             </div>
-            <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+            <p className=" mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
             <div className="text-2xl font-bold text-gray-900 mb-4">$0<span className="text-base font-normal text-gray-600">/ month</span></div>
             <ul className="mb-6 space-y-3">
               <li className="flex items-center text-gray-900">
@@ -42,7 +42,7 @@ const PricingPlans = () => {
           </div>
 
           {/* Pro Plan */}
-          <div className="border rounded-lg p-6 bg-white shadow-lg">
+          <div className="border rounded-lg p-6 bg-white shadow-lg hover:bg-gray-700  hover:text-white">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 border-2 border-blue-500 rounded-lg flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-primary rounded-lg"></div>
@@ -50,7 +50,7 @@ const PricingPlans = () => {
               <h2 className="ml-4 text-xl font-semibold text-gray-900">Pro</h2>
               <div className="ml-auto bg-yellow-400 text-white text-sm px-3 py-1 rounded-full">Best Value</div>
             </div>
-            <p className="text-gray-600 mb-6">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p className=" mb-6">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
             <div className="text-2xl font-bold text-gray-900 mb-4">$18<span className="text-base font-normal text-gray-600">/ month</span></div>
             <ul className="mb-6 space-y-3">
               <li className="flex items-center text-gray-900">
@@ -74,7 +74,7 @@ const PricingPlans = () => {
           </div>
 
           {/* Enterprise Plan */}
-          <div className="border rounded-lg p-6 bg-white text-black">
+          <div className="border rounded-lg p-6 bg-white text-black hover:bg-gray-700 hover:text-white">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
                 <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" fill="none" stroke="blue" strokeWidth="2">
@@ -84,7 +84,7 @@ const PricingPlans = () => {
               </div>
               <h2 className="ml-4 text-xl font-semibold">Enterprise</h2>
             </div>
-            <p className="text-black mb-6">Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+            <p className=" mb-6">Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
             <div className="text-2xl font-bold mb-4">Let's Talk</div>
             <ul className="mb-6 space-y-3">
               <li className="flex items-center">

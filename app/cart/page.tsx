@@ -4,7 +4,9 @@
 // import Navbar from "@/components/navbar";
 
 // interface Product {
-//   _id: string;
+//   
+
+
 //   productname: string;
 //   category: string;
 //   image: string;
@@ -31,7 +33,7 @@
 //     setCart((prevCart) =>
 //       prevCart.map((item) =>
 //         item.id === id
-//           ? { ...item, quantity: Math.max(item.quantity + change, 1) }
+         
 //           : item
 //       )
 //     );
