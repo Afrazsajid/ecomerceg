@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 import Searchfrom from "@/components/ui/serachform"
 import { useCart } from '@/app/context/cartcontext';
+import UnderDevelopment from './ui/underdevelopment';
 
 
 
@@ -39,6 +40,8 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
     
 
     <nav className="bg-white shadow-md sticky w-full top-0 z-50">
+    <div className='m-auto  text-[21px] text-center bg-black-200 text-white'>currently integrating Sanity so there will be some errors    <br />(faculty memebers specially for you) </div>
+   
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo / Home */}
         <div className="text-lg font-bold text-gray-800 m-3">Desi Bazar</div>
@@ -51,6 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
             className="w-full border rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           /> */}
           <Searchfrom query={query}/>
+        
         </div>
 
         {/* Buttons (Visible on Desktop) */}

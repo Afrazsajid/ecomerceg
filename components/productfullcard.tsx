@@ -30,7 +30,10 @@ interface Product {
   category: string;
   
 
-slug: string;
+slug: {
+  current:string;
+  _type:string;
+};
   image: string;
   description: string;
   unsetprice:string;
@@ -77,8 +80,8 @@ const ProductFullCard: React.FC<ProductFullCardProps> = ({ product }) => {
   const handleAddToCart = () => {
     addToCart(product.
 
-slug); // Add the product to the cart
-    alert(`Product added to the cart! ${product.productname}`);
+slug.current); // Add the product to the cart
+    // alert(`Product added to the cart! ${product.productname}`);
   };
 
 

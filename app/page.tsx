@@ -8,6 +8,7 @@ import FeaturedProducts from '@/components/feturedproducts';
 import Shirtsection from '@/components/3rdsectionshirt';
 import { client } from '@/sanity/lib/client';
 import { PRODUCTS_Query } from '@/sanity/lib/quries';
+import { getProductById } from '@/lib/utils';
 
 
 
@@ -21,9 +22,12 @@ export default async function Home({
   searchParams: Promise<{ query?: string }>;
 }) {
   const query = (await searchParams).query;
+  let params = { search:query || null}
 
-  const posts = await client.fetch(PRODUCTS_Query)
-  console.log(posts)
+  const posts = await client.fetch(PRODUCTS_Query,params)
+
+
+  // console.log(posts)
 
 
 

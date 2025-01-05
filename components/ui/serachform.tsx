@@ -6,7 +6,7 @@ import Searchreset from "@/components/searchformrest"
 import {Search} from "lucide-react";
  
 export default function Page({ query }: { query?: string }) {
-  console.log("Query value:", query);
+  // console.log("Query value:", query);
   
  
  
