@@ -14,6 +14,9 @@ import Link from 'next/link';
 import Searchfrom from "@/components/ui/serachform"
 import { useCart } from '@/app/context/cartcontext';
 import UnderDevelopment from './ui/underdevelopment';
+import { useToast } from "@/hooks/use-toast"
+import { Button } from './ui/button';
+
 
 
 
@@ -27,6 +30,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
 
   const { cart } = useCart();
+  const { toast } = useToast()
 
   
   // A function to check if the current item is the highlighted one
@@ -84,10 +88,25 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           >
             Contact
           </Link>
-          <Link href="/cart"
+
+          <Button className={`px-6 py-2 rounded-lg  bg-white-100 ${getButtonClass("cart")} hover:bg-gray-300 relative`}
+      onClick={() => {
+        toast({ variant: "destructive" ,
+          title: "Integrating Sanity",
+          description: "Website is under development and in cart i cannot fetch data asynchrously i amm seeting it out ",
+        })
+      }}
+    >
+       <ShoppingCart  />
+          <span className="absolute bottom-0 right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {cart.length}
+            </span>
+          
+    </Button>
+           {/* <Link href="/cart"
             className={`px-6 py-2 rounded-lg ${getButtonClass("cart")} hover:bg-gray-300 relative`}
           >
-            {/* Cart Icon */}
+          
           <ShoppingCart  />
           <span className="absolute bottom-0 right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
               {cart.length}
@@ -95,6 +114,10 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           
           
           </Link>
+           */}
+          
+
+
          {/* Conditionally render Login/Signup or UserButton based on signed-in state */}
          {/* <SignedOut>
               <Link href="./signin" className={`px-4 py-2 rounded-lg ${getButtonClass("login")} hover:bg-gray-300`}>Login</Link>
