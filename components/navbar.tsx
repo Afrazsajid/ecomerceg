@@ -68,11 +68,20 @@ const Navbar: React.FC<NavbarProps> = ({ highlightedItem , query }) => {
           >
             Home
           </Link>
-          <Link href="/category"
+
+          <Button className={`px-6 py-2 rounded-lg  bg-white ${getButtonClass("cart")} hover:bg-gray-300 relative `}
+      onClick={() => {
+        toast({ variant: "destructive" ,
+          title: "Integrating Sanity",
+          description: "Website is under development and in cart i cannot fetch data asynchrously i amm seeting it out ",
+        })
+      }}
+    >Category</Button>
+          {/* <Link href="/category"
             className={`px-4 py-2 rounded-lg ${getButtonClass("category")} hover:bg-gray-300`}
           >
             Category
-          </Link>
+          </Link> */}
           <Link href="/about"
             className={`px-4 py-2 rounded-lg ${getButtonClass("about")} hover:bg-gray-300`}
           >
